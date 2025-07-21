@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JAYAM's | Portfolio</title>
+  <link rel="stylesheet" href="CommonStyle.css">
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <header>
+      <h1>JAYAM VISHWAKARMA</h1>
+      <p>Developer | Designer | Curious Learner</p>
+    </header>
+
+    <nav>
+      <a href="#">About Me</a>
+      <a href="#">Skills</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <img src="jayam.jpg" alt="Portrait of Jayam">
+      <p>I’m a passionate programmer and creative web developer. Skilled in C++, HTML, and CSS. I blend logic with design to build engaging digital experiences.</p>
+    </section>
+    <section>
+      <button class="btn" onclick="hire()">Hire Me</button>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>C++ Programming</li>
+        <li>HTML & CSS Web Development</li>
+        <li>Creative Design & Layout</li>
+        <li>Responsive, Accessible Interfaces</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Platformer 2D Design</h3>
+        <img src="platformers.png" alt="2D Games Screenshot">
+        <p>A Platformer website using Python and PHP.</p>
+      </div>
+      <div class="project">
+        <h3>A Tourist website Design</h3>
+        <img src="phpproject.png" alt="Toruist Website">
+        <p>A Tourist website using HTML/PHP/Javascript.</p>
+      </div>
+    </section>
+
+    <section id="resume">
+      <h2>Resume</h2>
+      <a href="JAYAM CV.pdf" download="Jayam_Resume.pdf" class="btn">Download Resume</a>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:jayam17236@gmail.com">jayam@example.com</a></p>
+      <p>Phone: +91 9876543210</p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 JAYAM VISHWAKARMA. All rights reserved.</p>
+      <a href="#top" class="btn">Back to Top</a>
+    </footer>
+
+  </div>
+
+  <script>
+    function hire() {
+      const result = confirm("Do you want to proceed with the hiring?");
+      alert(result ? "Awesome! 🎉" : "No worries! Maybe next time. 🙌");
+    }
+  </script>
+
+</body>
+</html>
