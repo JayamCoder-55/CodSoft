@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="common.css">
+    <title>Calculator | Jayam</title>
+</head>
+<body>
+    
+    <div class="calculator">
+  <div class="display" id="display">0</div>
+  <div class="buttons">
+    <button>7</button><button>8</button><button>9</button><button>/</button>
+    <button>4</button><button>5</button><button>6</button><button>*</button>
+    <button>1</button><button>2</button><button>3</button><button>-</button>
+    <button>0</button><button>C</button><button>=</button><button>+</button>
+  </div>
+</div>
+
+<script>
+    const display = document.getElementById("display");
+let firstNumber = "";
+let secondNumber = "";
+let operator = "";
+let result = "";
+
+function updateDisplay(value) {
+  display.textContent = value || "0";
+}
+
+// All LOGIC SET FOR CALCULATOR HERE
+document.querySelectorAll("button").forEach(button => {
+  button.addEventListener("click", () => {
+    const value = button.textContent;
+
+    if (value === "C") {
+      firstNumber = "";
+      secondNumber = "";
+      operator = "";
+      result = "";
+      updateDisplay("");
+    } else if (value === "+" || value === "-" || value === "*" || value === "/") {
+      operator = value;
+      updateDisplay(operator);
+    } else if (value === "=") {
+      const num1 = parseFloat(firstNumber);
+      const num2 = parseFloat(secondNumber);
+
+      if (operator === "+") result = num1 + num2;
+      else if (operator === "-") result = num1 - num2;
+      else if (operator === "*") result = num1 * num2;
+      else if (operator === "/") result = num2 !== 0 ? num1 / num2 : "Error";
+
+      updateDisplay(result);
+      firstNumber = result.toString();
+      secondNumber = "";
+      operator = "";
+    } else {
+      if (operator === "") {
+        firstNumber += value;
+        updateDisplay(firstNumber);
+      } else {
+        secondNumber += value;
+        updateDisplay(secondNumber);
+      }
+    }
+  });
+});
+
+
+</script>
+</body>
+</html>
