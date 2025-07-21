@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JAYAM's | Portfolio</title>
+  <link rel="stylesheet" href="CommonStyle.css">
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <header>
+      <h1>JAYAM VISHWAKARMA</h1>
+      <p>Developer | Designer | Curious Learner</p>
+    </header>
+
+    <nav>
+      <a href="about.html">About Me</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <section id="about">
+      <h2>JAYAM VISHWAKARMA</h2>
+      <img src="jayam.jpg" alt="Portrait of Jayam">
+      <p>I’m a passionate programmer and creative web developer. Skilled in C++, HTML, and CSS. I blend logic with design to build engaging digital experiences.</p>
+      <p style="font-size:1.2em; font-weight:bold;">
+  I’m a second-year BSc IT student with a strong foundation in programming and design. I specialize in file processing tasks using C++, and I’m passionate about blending clean, functional web layouts with a creative touch. I have a knack for turning feedback into improved visuals and love crafting intuitive, user-friendly experiences. Driven, methodical, and detail-oriented—I enjoy solving problems that challenge both logic and imagination.
+</p>
+    </section>
+    <section>
+      <button class="btn" onclick="hire()">Hire Me</button>
+    </section>
+
+
+
+    <footer>
+      <p>&copy; 2025 JAYAM VISHWAKARMA. All rights reserved.</p>
+      <a href="#top" class="btn">Back to Top</a>
+    </footer>
+
+  
+
+  <script>
+    function hire() {
+      const result = confirm("Do you want to proceed with the hiring?");
+      alert(result ? "Awesome! 🎉" : "No worries! Maybe next time. 🙌");
+    }
+  </script>
+
+</body>
+</html>
